@@ -9,9 +9,9 @@ RUN yum install -y git
 RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 RUN rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 
-# Installing PHP
+# Installing PHP/nginx/MySQL
 RUN yum clean all
-RUN yum -y --enablerepo=remi,remi-php55 install php-cli php-common php-json php-gd php-intl php-mbstring php-mcrypt php-mysqlnd php-ldap php-pdo php-pear php-pgsql php-process php-soap php-pecl-xdebug php-xml php-xsl php-pecl-zip
+RUN yum -y --enablerepo=remi,remi-php55 install php-fpm php-cli php-common php-json php-gd php-intl php-mbstring php-mcrypt php-mysqlnd php-ldap php-pdo php-pear php-pgsql php-process php-soap php-pecl-xdebug php-xml php-xsl php-pecl-zip mysql-server mysql nginx
 
 # Installing pip and aws-cli
 RUN yum install -y python-setuptools
