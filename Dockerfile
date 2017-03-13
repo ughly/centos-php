@@ -24,7 +24,7 @@ RUN wget -O /usr/local/bin/composer https://getcomposer.org/composer.phar
 RUN chmod +x /usr/local/bin/composer
 
 # Installing phpunit
-RUN composer global require "phpunit/phpunit=4.8.*"
+RUN composer global require "phpunit/phpunit=^5.0"
 RUN composer global require phpmd/phpmd
 RUN composer global require squizlabs/php_codesniffer
 RUN composer global require sebastian/phpcpd
