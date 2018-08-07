@@ -11,7 +11,7 @@ RUN rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 
 # Installing PHP
 RUN yum clean all
-RUN yum -y --enablerepo=remi,remi-php71 install php-cli php-common php-json php-gd php-intl php-mbstring php-mcrypt php-mysqlnd php-ldap php-pdo php-pear php-pgsql php-process php-soap php-pecl-xdebug php-xml php-xsl php-pecl-zip php-opcache
+RUN yum -y --enablerepo=remi,remi-php72 install php-cli php-common php-json php-gd php-intl php-mbstring php-mcrypt php-mysqlnd php-ldap php-pdo php-pear php-pgsql php-process php-soap php-pecl-xdebug php-xml php-xsl php-pecl-zip php-opcache
 
 # Installing pip and aws-cli
 RUN yum install -y python-setuptools python-pip
